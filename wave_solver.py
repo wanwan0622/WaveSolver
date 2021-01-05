@@ -5,7 +5,7 @@ T = 10
 X = 1
 Y = 1
 Z = 1
-c = 1
+C = 1
 
 # 刻み幅
 dt = 0.01
@@ -23,8 +23,8 @@ print(tn, xn, yn, zn)
 P = np.zeros((tn, xn, yn, zn))
 P[0][xn // 2][yn // 2][zn // 2] = 200
 
-# 陽的差分法
-alpha = c ** 2 * dt ** 2 / dl ** 2
+# 陽的差分法(中心差分近似)
+alpha = C ** 2 * dt ** 2 / dl ** 2
 for i in range(tn - 1):
     for j in range(1, xn - 1):
         for k in range(1, yn - 1):
